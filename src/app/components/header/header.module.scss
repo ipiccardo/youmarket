@@ -1,0 +1,16 @@
+$base-color: #01AD87;
+$text-primary: #FFFFFF;
+
+.headerContainer {
+    background-color: #01AD87;
+    color: #FFFFFF;
+    height: 80px;
+    text-align: center;
+    line-height: 19.5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 15px;
+}
+
