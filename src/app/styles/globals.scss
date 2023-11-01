@@ -1,3 +1,6 @@
+@import "./font.scss";
+@import "normalize.scss";
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -83,11 +86,13 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
 
 }
+
 
 a {
   color: inherit;
@@ -99,3 +104,4 @@ a {
     color-scheme: dark;
   }
 }
+

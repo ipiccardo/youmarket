@@ -1,9 +1,11 @@
 $base-color: #01AD87;
+$secondary-color: #C4C4C4;
 $text-primary: #FFFFFF;
 
+
 .headerContainer {
-    background-color: #01AD87;
-    color: #FFFFFF;
+    background-color: $base-color;
+    color: $text-primary;
     height: 80px;
     text-align: center;
     line-height: 19.5px;

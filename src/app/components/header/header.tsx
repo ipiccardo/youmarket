@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss'
 import { usePathname } from 'next/navigation';
 
-const header = () => {
+const Header = () => {
     const [title, setTitle] = useState('')
     const pathName = usePathname();
 
@@ -31,4 +31,4 @@ const header = () => {
     )
 }
 
-export default header
+export default Header
