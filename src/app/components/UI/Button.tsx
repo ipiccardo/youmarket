@@ -9,12 +9,13 @@ interface Props {
     classNameContent?: string;
     classNameButton?: string;
     text: string;
+    secondaryButton?: boolean
 }
 
-const Button = ({ href, classNameButton, classNameContent, text }: Props): JSX.Element => {
+const Button = ({ href, classNameButton, classNameContent, text, secondaryButton }: Props): JSX.Element => {
     return (
         <Link href={href}>
-            <button className={`${classes.button} ${classNameButton || ""}`}>
+            <button className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
                 <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
             </button>
         </Link>

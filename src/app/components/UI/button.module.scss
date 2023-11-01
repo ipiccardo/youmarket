@@ -1,6 +1,7 @@
 @import '../header/header.module.scss';
 @import "../../styles/font.scss";
 
+
 .button {
     all: unset;
     background-color: $base-color;
@@ -21,4 +22,24 @@
   
   .button:hover {
     background-color: $secondary-color
+  }
+
+
+  .secondaryButton {
+    all: unset;
+    background-color: $secondary-color;
+    width: 280px;
+    height: 65px;
+    border-radius: 360px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+  }
+
+
+  .secondaryButton .text {
+    color: #ffffff;
+    text-align: center;
+    font-size: 21px;
+    line-height: 25.6px;
+    font-family: 'Montserrat';
+    font-weight: 400;
   }

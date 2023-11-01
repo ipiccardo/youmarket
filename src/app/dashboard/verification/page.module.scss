@@ -1,0 +1,37 @@
+@import "../../styles/font.scss";
+
+
+.formContainer {
+ width: 381px;
+ height: 500px;
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto;
+ margin-top: 134px;
+}
+
+
+.paragraphContainer {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 23px
+}
+
+
+.paragraphContainer p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.07px;
+}
+
+.paragraphContainer .mail {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.38px;
+}
