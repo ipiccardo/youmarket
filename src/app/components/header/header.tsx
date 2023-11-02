@@ -24,8 +24,6 @@ const Header = () => {
     }, [pathName])
 
 
-    console.log(pathName, 'nombre del path')
-
     return (
         <div className={styles.headerContainer}>{title}</div>
     )

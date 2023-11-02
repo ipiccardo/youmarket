@@ -1,5 +1,4 @@
-import Button from '@/app/components/UI/Button'
-import Inputs from '@/app/components/UI/Inputs'
+import Form from '@/app/components/UI/Form'
 import React from 'react'
 import classes from './page.module.scss'
 
@@ -11,8 +10,7 @@ const Verification = () => {
                 <p className={classes.mail}>test@test.com.ar</p>
                 <p>Ingresa el código de 6 dígitos recibido</p>
             </div>
-            <Inputs />
-            <Button href={''} text={'REENVIAR CÓDIGO'} secondaryButton={true} />
+            <Form />
         </div>
     )
 }

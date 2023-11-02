@@ -2,7 +2,7 @@
 @import "../../styles/font.scss";
 
 
-.formContainer {
+.inputsContainer {
     display: flex;
     gap: 18px;
     width: 356px;
@@ -12,12 +12,24 @@
     justify-content: center;
 }
 
-.formContainer input {
+.inputsContainer input {
     width: 40px;
     height: 45px;
     border-radius: 10px;
     border-color: none;
     background-color: #F9F8F8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border: solid 0px
+    border: solid 0px;
+    text-align: center;
 }
+
+.formContainer {
+    width: 381px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+   }
+   
