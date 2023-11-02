@@ -4,6 +4,10 @@ export type IconProps = {
     | "gift"
     | "movements"
     | "recharge"
+    | "downarrow"
+    | "reddownarrow"
+    | "uparrow"
+    | string
     size: number;
     onClick?: Function;
 };

@@ -5,8 +5,11 @@ import Gift from "./icons/Gift";
 import Movements from "./icons/Movements";
 import Recharge from "./icons/Recharge";
 import Settings from "./icons/Settings";
+import DownArrow from "./icons/DownArrow";
+import RedDownArrow from "./icons/redDownArrow";
+import UpArrow from "./icons/upArrow";
 
-const Icons = (name: string, size: number) => {
+const Icons = (name: string | any, size: number) => {
     switch (name) {
         case "settings":
             return <Settings size={size} />;
@@ -16,6 +19,12 @@ const Icons = (name: string, size: number) => {
             return <Movements size={size} />;
         case "recharge":
             return <Recharge size={size} />;
+        case "downarrow":
+            return <DownArrow size={size} />;
+        case "reddownarrow":
+            return <RedDownArrow size={size} />;
+        case "uparrow":
+            return <UpArrow size={size} />;
         default:
             return '';
     }

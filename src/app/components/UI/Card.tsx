@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from "./card.module.scss";
+import Icon from './icon/icon';
 
 const Card = () => {
     return (
@@ -9,6 +10,9 @@ const Card = () => {
             </div>
             <div className={classes.campaignContainer}>
                 <p>Mi acción: <span>Nombre de Acción</span></p>
+                <div className={classes.iconContainer}>
+                    <Icon name={'downarrow'} size={20} />
+                </div>
             </div>
         </div>
     )
