@@ -1,0 +1,33 @@
+"use client";
+
+import { IconProps } from "@/app/types";
+import Gift from "./icons/Gift";
+import Movements from "./icons/Movements";
+import Recharge from "./icons/Recharge";
+import Settings from "./icons/Settings";
+
+const Icons = (name: string, size: number) => {
+    switch (name) {
+        case "settings":
+            return <Settings size={size} />;
+        case "gift":
+            return <Gift size={size} />;
+        case "movements":
+            return <Movements size={size} />;
+        case "recharge":
+            return <Recharge size={size} />;
+        default:
+            return '';
+    }
+};
+
+/**
+ * @param name Nombre del icono
+ * @param size Tamaño del icono
+ * @param onClick Función a ejecutar al hacer click
+ */
+
+export default function Icon({ name, size = 20, onClick }: IconProps) {
+
+    return Icons(name, size);
+}
