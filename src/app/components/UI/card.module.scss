@@ -1,0 +1,36 @@
+.cardContainer {
+    width: 400px;
+    height: 140px;
+    border-radius: 10px;
+    background-color: #F9F8F8;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.amountContainer {
+    width: 400px;
+    height: 70px;
+}
+
+.amountContainer p {
+    margin: 23px 13px;
+}
+
+.amountContainer span {
+    font-weight: bold;
+}
+
+.campaignContainer {
+    width: 400px;
+    height: 70px;
+}
+
+.campaignContainer p {
+    margin: 23px 13px;
+}
+
+.campaignContainer span {
+    font-weight: bold;
+}
