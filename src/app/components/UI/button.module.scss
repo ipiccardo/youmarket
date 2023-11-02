@@ -10,6 +10,9 @@
     border-radius: 360px;
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
   }
+
+
+ 
   
   .button .text {
     color: #ffffff;
@@ -42,4 +45,9 @@
     line-height: 25.6px;
     font-family: 'Montserrat';
     font-weight: 400;
+  }
+
+
+  .secondaryButton:focus {
+    background-color: $base-color;
   }

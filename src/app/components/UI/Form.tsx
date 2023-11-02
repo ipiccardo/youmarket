@@ -9,6 +9,7 @@ type NumberArray = (number | '' | any)[];
 function Form() {
     const inputRefs: any = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
     const [values, setValues] = useState<NumberArray>(['', '', '', '', '', '']);
+    const [focusSeted, setFocusSeted] = useState<boolean>(false)
 
     const handleChange = (e: any, index: number) => {
 
@@ -33,7 +34,7 @@ function Form() {
             }
             else {
                 inputRefs.map((input: any) => {
-                    input.current.value === '' && input.current.focus()
+                    input.current.value === '' ? input.current.focus() : setFocusSeted(true)
                     return
                 })
             }
@@ -60,7 +61,7 @@ function Form() {
                 })
                 }
             </div>
-            <Button href={''} text={'REENVIAR CÓDIGO'} secondaryButton={true} />
+            <Button href={''} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} />
         </form>
     );
 }
