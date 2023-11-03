@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from '../UI/icon/icon'
 import classes from './actions.module.scss'
+import Movements from '../movements/Movements'
 
 const Actions = () => {
 
@@ -13,21 +14,24 @@ const Actions = () => {
 
 
     return (
-        <div className={classes.actionsContainer}>
-            <p>Acciones</p>
-            <div className={classes.iconContaier}>
-                {propValues.map((propValue, index) => {
-                    return (
-                        <div className={classes.divIcon}>
-                            <Icon key={index} name={propValue.name} size={45} />
-                            <p>{propValue.text}</p>
-                        </div>
+        <>
+            <div className={classes.actionsContainer}>
+                <p>Acciones</p>
+                <div className={classes.iconContaier}>
+                    {propValues.map((propValue, index) => {
+                        return (
+                            <div className={classes.divIcon}>
+                                <Icon key={index} name={propValue.name} size={45} />
+                                <p>{propValue.text}</p>
+                            </div>
+                        )
+                    }
                     )
-                }
-                )
-                }
+                    }
+                </div>
             </div>
-        </div>
+            <Movements />
+        </>
     )
 }
 

@@ -1,0 +1,32 @@
+[
+  {
+    "icono": "uparrow",
+    "texto": "Carga de Saldo",
+    "monto": "+$10,000.00",
+    "fecha": "21/01"
+  },
+  {
+    "icono": "reddownarrow",
+    "texto": "Envío de Premio",
+    "monto": "-$2,500.00",
+    "fecha": "19/01"
+  },
+  {
+    "icono": "reddownarrow",
+    "texto": "Envío de Premio",
+    "monto": "-$2,500.00",
+    "fecha": "18/01"
+  },
+  {
+    "icono": "reddownarrow",
+    "texto": "Envío de Premio",
+    "monto": "-$2,500.00",
+    "fecha": "18/01"
+  },
+  {
+    "icono": "uparrow",
+    "texto": "Carga de Saldo",
+    "monto": "+$10,000.00",
+    "fecha": "21/01"
+  }
+]

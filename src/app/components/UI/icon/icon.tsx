@@ -6,8 +6,8 @@ import Movements from "./icons/Movements";
 import Recharge from "./icons/Recharge";
 import Settings from "./icons/Settings";
 import DownArrow from "./icons/DownArrow";
-import RedDownArrow from "./icons/redDownArrow";
-import UpArrow from "./icons/upArrow";
+import RedDownArrow from "./icons/RedDownArrow";
+import UpArrow from "./icons/UpArrow";
 
 const Icons = (name: string | any, size: number) => {
     switch (name) {
