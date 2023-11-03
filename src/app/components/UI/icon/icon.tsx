@@ -10,6 +10,7 @@ import RedDownArrow from "./icons/RedDownArrow";
 import UpArrow from "./icons/UpArrow";
 import AddAcount from "./icons/AddAcount";
 import Upload from "./icons/Upload";
+import SearchIcon from "./icons/SearchIcon";
 
 
 const Icons = (name: string | any, size: number) => {
@@ -34,6 +35,8 @@ const Icons = (name: string | any, size: number) => {
             return <AddAcount size={size} />;
         case "upload":
             return <Upload size={size} />;
+        case "search":
+            return <SearchIcon size={size} />;
         default:
             return '';
     }

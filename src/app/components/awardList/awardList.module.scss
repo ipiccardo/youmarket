@@ -1,0 +1,69 @@
+.yourAccountsContainer {
+  max-width: 428px;
+  height: 534px;
+}
+
+.yourAccountsContainer > p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px;
+  width: 86px;
+  height: 17px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+.account {
+  max-width: 409px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account div:first-child {
+  display: flex;
+  gap: 25px;
+}
+
+.account div div:first-child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 14.63px;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.dataContainer p {
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 400;
+}
+
+.checked {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f9f8f8;
+  margin-right: 23px;
+  border: none;
+}
+
+.widthDecoration {
+  border-bottom: 1px solid black;
+}
