@@ -1,37 +1,37 @@
 [
   {
-    "nombreCuenta": "nombre random 1",
-    "mailCuenta": "nombre random 1",
+    "nombreCuenta": "John Doe",
+    "mailCuenta": "john.doe@example.com",
     "checked": false
   },
   {
-    "nombreCuenta": "nombre random 2",
-    "mailCuenta": "nombre random 2",
+    "nombreCuenta": "Alice Smith",
+    "mailCuenta": "alice.smith@example.com",
     "checked": false
   },
   {
-    "nombreCuenta": "nombre random 3",
-    "mailCuenta": "nombre random 3",
+    "nombreCuenta": "Bob Johnson",
+    "mailCuenta": "bob.johnson@example.com",
     "checked": false
   },
   {
-    "nombreCuenta": "nombre random 4",
-    "mailCuenta": "nombre random 4",
+    "nombreCuenta": "Elena Martinez",
+    "mailCuenta": "elena.martinez@example.com",
     "checked": false
   },
   {
-    "nombreCuenta": "nombre random 5",
-    "mailCuenta": "nombre random 5",
+    "nombreCuenta": "Michael Brown",
+    "mailCuenta": "michael.brown@example.com",
     "checked": false
   },
   {
-    "nombreCuenta": "nombre random 6",
-    "mailCuenta": "nombre random 6",
+    "nombreCuenta": "Sophia Lee",
+    "mailCuenta": "sophia.lee@example.com",
     "checked": false
   },
   {
-    "nombreCuenta": "nombre random 7",
-    "mailCuenta": "nombre random 7",
+    "nombreCuenta": "William Wilson",
+    "mailCuenta": "william.wilson@example.com",
     "checked": false
   }
 ]
