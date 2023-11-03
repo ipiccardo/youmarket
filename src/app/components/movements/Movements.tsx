@@ -1,5 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import classes from './movements.module.scss'
+import Icon from '../UI/icon/icon';
 
 
 interface Item {
@@ -12,26 +14,31 @@ interface Item {
 function Movements() {
     const [data, setData] = useState([]);
 
-    // useEffect(() => {
-    //     fetch('pages/api/feedback')
-    //         .then((response) => {
-    //             return response.json()
-    //         })
-    //         .then((jsonData) => {
-    //             console.log(jsonData, 'jsonData')
-    //             setData(jsonData)
-    //         })
-    //         .catch((error) => console.error(error));
-    // }, []);
+    useEffect(() => {
+        fetch('/api')
+            .then((response) => {
+                return response.json()
+            })
+            .then((jsonData) => {
+                console.log(jsonData, 'jsonData')
+                setData(jsonData)
+            })
+            .catch((error) => console.error(error));
+    }, []);
 
     return (
-        <div>
+        <div className={classes.movementsContainer}>
+            <p>Últimos Movimientos</p>
             {data.map((item: Item, index) => (
-                <div key={index}>
-                    <p>Icono: {item.icono}</p>
-                    <p>Texto: {item.texto}</p>
-                    <p>Monto: {item.monto}</p>
-                    <p>Fecha: {item.fecha}</p>
+                <div className={classes.movement} key={index}>
+                    <div>
+                        <Icon key={index} name={item.icono} size={40} />
+                        <p> {item.texto}</p>
+                    </div>
+                    <div>
+                        <p> {item.monto}</p>
+                        <p>{item.fecha}</p>
+                    </div>
                 </div>
             ))}
         </div>
