@@ -1,0 +1,37 @@
+[
+  {
+    "nombreCuenta": "nombre random 1",
+    "mailCuenta": "nombre random 1",
+    "checked": false
+  },
+  {
+    "nombreCuenta": "nombre random 2",
+    "mailCuenta": "nombre random 2",
+    "checked": false
+  },
+  {
+    "nombreCuenta": "nombre random 3",
+    "mailCuenta": "nombre random 3",
+    "checked": false
+  },
+  {
+    "nombreCuenta": "nombre random 4",
+    "mailCuenta": "nombre random 4",
+    "checked": false
+  },
+  {
+    "nombreCuenta": "nombre random 5",
+    "mailCuenta": "nombre random 5",
+    "checked": false
+  },
+  {
+    "nombreCuenta": "nombre random 6",
+    "mailCuenta": "nombre random 6",
+    "checked": false
+  },
+  {
+    "nombreCuenta": "nombre random 7",
+    "mailCuenta": "nombre random 7",
+    "checked": false
+  }
+]
