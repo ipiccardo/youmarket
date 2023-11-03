@@ -7,6 +7,8 @@ export type IconProps = {
     | "downarrow"
     | "reddownarrow"
     | "uparrow"
+    | "addacount"
+    | "upload"
     | string
     size: number;
     onClick?: Function;

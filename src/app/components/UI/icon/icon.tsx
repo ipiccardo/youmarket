@@ -8,6 +8,9 @@ import Settings from "./icons/Settings";
 import DownArrow from "./icons/DownArrow";
 import RedDownArrow from "./icons/RedDownArrow";
 import UpArrow from "./icons/UpArrow";
+import AddAcount from "./icons/AddAcount";
+import Upload from "./icons/Upload";
+
 
 const Icons = (name: string | any, size: number) => {
     switch (name) {
@@ -25,6 +28,12 @@ const Icons = (name: string | any, size: number) => {
             return <RedDownArrow size={size} />;
         case "uparrow":
             return <UpArrow size={size} />;
+        case "uparrow":
+            return <UpArrow size={size} />;
+        case "addacount":
+            return <AddAcount size={size} />;
+        case "upload":
+            return <Upload size={size} />;
         default:
             return '';
     }

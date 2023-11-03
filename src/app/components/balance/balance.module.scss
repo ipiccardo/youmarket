@@ -1,0 +1,61 @@
+.balanceContainer {
+    max-width: 428px;
+    height: 762px;
+    margin-top: 64px;
+}
+
+
+.balanceContainer div {
+    max-width: 428px;
+    height: 173px;
+}
+
+.balanceContainer div p:first-child {
+    font-family: 'Montserrat';
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17.07px;
+    width: 40px;
+    height: 17px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+
+.balanceContainer div p + p {
+    font-family: 'Montserrat';
+    vertical-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 48px;
+    line-height: 58.51px;
+    text-align: center;
+    font-weight: 400;
+    gap: 17px
+}
+
+.balanceContainer div p + p span {
+    font-size: 24px;
+    line-height: 29.25px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttonContainer button {
+    margin-top: 173px;
+}
+
+.buttonContainer button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

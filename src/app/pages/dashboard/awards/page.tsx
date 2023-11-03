@@ -1,8 +1,11 @@
+import NewAcounts from '@/app/components/newAcounts/NewAcounts'
 import React from 'react'
 
 const Awards = () => {
     return (
-        <div>Awards</div>
+        <div>
+            <NewAcounts />
+        </div>
     )
 }
 
