@@ -1,3 +1,4 @@
+import classes from '../components/awardList/awardList.module.scss'
 
 export const extractFirstLetter = ({ name }: any) => {
     return (
@@ -6,3 +7,19 @@ export const extractFirstLetter = ({ name }: any) => {
             .join('')
     )
 }
+
+
+export const renderAccount = (e: any, index: number, handleButtonClick: any, activeButtonIndex: any) => (
+    <div key={index} className={classes.account}>
+        <div>
+            <div>{extractFirstLetter(e)}</div>
+            <div className={classes.dataContainer}>
+                <p>{e.name}</p>
+                <p className={index === 0 || index === 3 ? '' : classes.widthDecoration}>{e.mail}</p>
+            </div>
+        </div>
+        <button className={classes.checked} onClick={() => handleButtonClick(index)}>
+            {activeButtonIndex === index ? 'X' : ''}
+        </button>
+    </div>
+);
