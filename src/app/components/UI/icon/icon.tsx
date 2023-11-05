@@ -11,6 +11,7 @@ import UpArrow from "./icons/UpArrow";
 import AddAcount from "./icons/AddAcount";
 import Upload from "./icons/Upload";
 import SearchIcon from "./icons/SearchIcon";
+import BackArrow from "./icons/BackArrow";
 
 
 const Icons = (name: string | any, size: number) => {
@@ -37,6 +38,8 @@ const Icons = (name: string | any, size: number) => {
             return <Upload size={size} />;
         case "search":
             return <SearchIcon size={size} />;
+        case "back":
+            return <BackArrow size={size} />
         default:
             return '';
     }

@@ -10,6 +10,7 @@ export type IconProps = {
     | "addacount"
     | "upload"
     | "search"
+    | "back"
     | string
     size: number;
     onClick?: Function;

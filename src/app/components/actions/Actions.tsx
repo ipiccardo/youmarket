@@ -1,7 +1,10 @@
+'use client'
+
 import React from 'react'
 import Icon from '../UI/icon/icon'
 import classes from './actions.module.scss'
 import Movements from '../movements/Movements'
+import Link from 'next/link'
 
 const Actions = () => {
 
@@ -21,7 +24,9 @@ const Actions = () => {
                     {propValues.map((propValue, index) => {
                         return (
                             <div className={classes.divIcon}>
-                                <Icon key={index} name={propValue.name} size={45} />
+                                <Link href={`${propValue.name === 'recharge' ? '/pages/dashboard/acredit' : 'pages'}`}>
+                                    <Icon key={index} name={propValue.name} size={45} />
+                                </Link>
                                 <p>{propValue.text}</p>
                             </div>
                         )

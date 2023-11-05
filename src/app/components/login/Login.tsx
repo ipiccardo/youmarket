@@ -13,7 +13,7 @@ const Login = () => {
                     <label>CUIT o Correo Electrónico</label>
                 </form>
             </div>
-            <Button href={''} text={'INICIAR SESIÓN'} />
+            <Button href={'/pages/dashboard/verification'} text={'INICIAR SESIÓN'} />
             <a className={styles.link}>Aún no tengo cuenta</a>
         </div>
     )

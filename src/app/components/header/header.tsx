@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss'
 import { usePathname } from 'next/navigation';
+import Icon from '../UI/icon/icon';
 
 const Header = () => {
     const [title, setTitle] = useState('')
@@ -25,7 +26,14 @@ const Header = () => {
 
 
     return (
-        <div className={styles.headerContainer}>{title}</div>
+        <div className={styles.headerContainer}>
+            {title !== '¡Hola Test!' && title !== '' ?
+                (
+                    <Icon name='back' size={40} />
+                ) : ''
+            }
+            {title}
+        </div>
     )
 }
 

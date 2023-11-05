@@ -61,7 +61,7 @@ function Form() {
                 })
                 }
             </div>
-            <Button href={''} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} />
+            <Button href={'/'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} />
         </form>
     );
 }
