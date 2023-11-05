@@ -46,6 +46,7 @@
 }
 
 .cuitOrMail input:focus + label,
+.cuitOrMail input:not(:placeholder-shown) + label,
 .cuitOrMail input:valid + label {
   opacity: 0;
   pointer-events: none;
@@ -72,4 +73,11 @@
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  position: absolute;
+  top: 30px;
 }

@@ -25,7 +25,7 @@ const Balance = () => {
                 <div className={classes.span}>$</div>
             </form>
             <div className={classes.buttonContainer}>
-                <Button href={''} text={'CONTINUAR'} secondaryButton={true} />
+                <Button href={'/pages/dashboard/awards'} text={'CONTINUAR'} secondaryButton={true} />
             </div>
         </div>
     )

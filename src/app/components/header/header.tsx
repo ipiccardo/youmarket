@@ -2,13 +2,13 @@
 
 import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss'
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Icon from '../UI/icon/icon';
 
 const Header = () => {
     const [title, setTitle] = useState('')
     const pathName = usePathname();
-
+    const router = useRouter()
 
     useEffect(() => {
         if (pathName.includes('verification')) {
@@ -29,7 +29,9 @@ const Header = () => {
         <div className={styles.headerContainer}>
             {title !== '¡Hola Test!' && title !== '' ?
                 (
-                    <Icon name='back' size={40} />
+                    <div onClick={() => router.back()}>
+                        <Icon name='back' size={40} />
+                    </div>
                 ) : ''
             }
             {title}

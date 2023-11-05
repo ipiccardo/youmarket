@@ -15,6 +15,10 @@ $text-primary: #ffffff;
   padding-bottom: 15px;
 }
 
+.headerContainer div {
+  cursor: pointer;
+}
+
 .headerContainer svg {
   padding: 5px;
   position: absolute;
