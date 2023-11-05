@@ -9,7 +9,7 @@ const AwardList = () => {
     const [list, setList] = useState([])
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredList, setFilteredList] = useState([]);
-    const [activeButtonIndex, setActiveButtonIndex] = useState<number | undefined>();
+    const [activeButtonIndex, setActiveButtonIndex] = useState<number | undefined>(0);
     const [isChecked, setIsChecked] = useState(false)
 
 
