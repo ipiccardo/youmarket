@@ -7,9 +7,11 @@ const Login = () => {
     return (
         <div className={styles.loginContainer}>
             <div className={styles.cuitOrMail}>
-                <p>
-                    CUIT o Correo Electrónico
-                </p>
+                <form>
+                    <input required>
+                    </input>
+                    <label>CUIT o Correo Electrónico</label>
+                </form>
             </div>
             <Button href={''} text={'INICIAR SESIÓN'} />
             <a className={styles.link}>Aún no tengo cuenta</a>
