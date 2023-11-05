@@ -23,9 +23,9 @@ const Actions = () => {
                 <div className={classes.iconContaier}>
                     {propValues.map((propValue, index) => {
                         return (
-                            <div className={classes.divIcon}>
+                            <div key={new Date().getTime() + index} className={classes.divIcon}>
                                 <Link href={`${propValue.name === 'recharge' ? '/pages/dashboard/acredit' : 'pages'}`}>
-                                    <Icon key={index} name={propValue.name} size={45} />
+                                    <Icon name={propValue.name} size={45} />
                                 </Link>
                                 <p>{propValue.text}</p>
                             </div>

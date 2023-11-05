@@ -20,19 +20,27 @@ const Login = () => {
         }
     };
 
-
+    const handleShowError = (e: any) => {
+        if (error || email === '') {
+            setError('Ingrese una dirección de correo electrónico válida.')
+            setBlur(true)
+            setEmail('ejemplo@hotmail.com')
+        } else {
+            setError('')
+        }
+    }
 
     return (
         <div className={styles.loginContainer}>
             <div className={styles.cuitOrMail}>
                 <form>
-                    <input type='email' id="myInput" placeholder="" required value={email}
-                        onChange={handleEmailChange} onBlur={() => setBlur(true)} onFocus={() => { setError(''), setBlur(false) }} />
+                    <input type='email' id="myInput" placeholder="" required value={email || ''}
+                        onChange={handleEmailChange} onBlur={() => setBlur(true)} onFocus={() => { setError(''), setBlur(false), setEmail(email.includes('ejemplo') ? '' : email) }} />
                     <label htmlFor="myInput">CUIT o Correo Electrónico</label>
-                    {error && blur && email !== '' ? <div className={styles.error}>{error}</div> : ''}
+                    {(error && blur && email !== '') ? <div className={styles.error}>{error}</div> : ''}
                 </form>
             </div>
-            <Button href={'/pages/dashboard/verification'} text={'INICIAR SESIÓN'} />
+            <Button onClick={handleShowError} href={`${error === '' && email !== '' ? '/pages/dashboard/verification' : '/'}`} text={'INICIAR SESIÓN'} />
             <a className={styles.link}>Aún no tengo cuenta</a>
         </div>
     )

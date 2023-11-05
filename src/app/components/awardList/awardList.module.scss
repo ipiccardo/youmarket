@@ -68,3 +68,15 @@
 .widthDecoration {
   border-bottom: 1px solid black;
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainer button {
+  width: 280px;
+  height: 65px;
+  border-radius: 360px;
+  margin-bottom: 28px;
+}

@@ -48,7 +48,7 @@ function Form() {
                 {inputRefs.map((inputRef: any, index: number) => {
                     return (
                         <input
-                            key={index}
+                            key={new Date().getTime() + index}
                             type="text"
                             inputMode='numeric'
                             value={values[index]}
@@ -61,7 +61,7 @@ function Form() {
                 })
                 }
             </div>
-            <Button href={'/'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} />
+            <Button href={'/pages'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} />
         </form>
     );
 }

@@ -20,7 +20,6 @@ function Movements() {
                 return response.json()
             })
             .then((jsonData) => {
-                console.log(jsonData, 'jsonData')
                 setData(jsonData)
             })
             .catch((error) => console.error(error));
@@ -32,7 +31,7 @@ function Movements() {
             {data.map((item: Item, index) => (
                 <div className={classes.movement} key={index}>
                     <div>
-                        <Icon key={index} name={item.icono} size={40} />
+                        <Icon key={new Date().getTime() + index} name={item.icono} size={40} />
                         <p> {item.texto}</p>
                     </div>
                     <div>

@@ -8,11 +8,12 @@ interface Props {
     classNameContent?: string;
     classNameButton?: string;
     text: string;
-    secondaryButton?: boolean
-    flag?: boolean
+    secondaryButton?: boolean;
+    flag?: boolean;
+    onClick?: any;
 }
 
-const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag }: Props): JSX.Element => {
+const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag, onClick }: Props): JSX.Element => {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const Button = ({ href, classNameButton, classNameContent, text, secondaryButton
 
     return (
         <Link href={href}>
-            <button ref={buttonRef} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
+            <button onClick={onClick} ref={buttonRef} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
                 <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
             </button>
         </Link>

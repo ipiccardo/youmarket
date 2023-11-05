@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import classes from './awardList.module.scss'
 import { renderAccount } from '@/app/utils/generalFunctions'
 import Input from '../UI/Input'
+import Button from '../UI/Button'
+import Link from 'next/link'
 
 
 const AwardList = () => {
@@ -50,6 +52,10 @@ const AwardList = () => {
                 {filteredList.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))}
                 {!filteredList.length && list.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))}
             </div>
+            <div className={classes.buttonContainer}>
+                <Button text={'CONTINUAR'} secondaryButton={true} href='/' />
+            </div>
+
         </>
     )
 }

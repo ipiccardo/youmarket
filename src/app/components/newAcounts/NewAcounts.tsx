@@ -14,7 +14,7 @@ const NewAcounts = () => {
                 {icons.map((icon, index) => {
                     return (
                         <div className={modules.divIcon}>
-                            <Icon key={index} name={icon.name} size={40} />
+                            <Icon key={new Date().getTime() + index} name={icon.name} size={40} />
                             <p>{icon.text}</p>
                         </div>
                     )
