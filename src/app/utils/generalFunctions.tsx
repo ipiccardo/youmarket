@@ -9,7 +9,7 @@ export const extractFirstLetter = ({ name }: any) => {
 }
 
 
-export const renderAccount = (e: any, index: number, handleButtonClick: any, activeButtonIndex: any) => (
+export const renderAccount = (e: any, index: number, handleButtonClick: any, activeButtonIndex: number | undefined, filteredList: any) => (
     <div key={index} className={classes.account}>
         <div>
             <div>{extractFirstLetter(e)}</div>
@@ -19,7 +19,7 @@ export const renderAccount = (e: any, index: number, handleButtonClick: any, act
             </div>
         </div>
         <button className={classes.checked} onClick={() => handleButtonClick(index)}>
-            {activeButtonIndex === index ? 'X' : ''}
+            {activeButtonIndex === index && !filteredList[activeButtonIndex]?.checked ? 'X' : ''}
         </button>
     </div>
 );

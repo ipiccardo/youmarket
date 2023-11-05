@@ -9,7 +9,8 @@ const AwardList = () => {
     const [list, setList] = useState([])
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredList, setFilteredList] = useState([]);
-    const [activeButtonIndex, setActiveButtonIndex] = useState(null);
+    const [activeButtonIndex, setActiveButtonIndex] = useState<number | undefined>();
+    const [isChecked, setIsChecked] = useState(false)
 
 
     useEffect(() => {
@@ -27,17 +28,27 @@ const AwardList = () => {
 
     const handleButtonClick = (index: any) => {
         setActiveButtonIndex(index);
+        setIsChecked(!isChecked)
     };
 
-    console.log({ activeButtonIndex })
+    useEffect(() => {
+        filteredList.map((element: any, index: number) => {
+            if (activeButtonIndex === index && element.checked === false) {
+                return element.checked = true
+            } else {
+                return element.checked = false
+            }
+        })
+
+    }, [activeButtonIndex, isChecked])
 
     return (
         <>
             <Input searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <div className={classes.yourAccountsContainer}>
                 <p>Tus Cuentas</p>
-                {filteredList.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex))}
-                {!filteredList.length && list.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex))}
+                {filteredList.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))}
+                {!filteredList.length && list.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))}
             </div>
         </>
     )
