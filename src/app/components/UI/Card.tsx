@@ -37,12 +37,7 @@ const Card = () => {
         if (Array.isArray(data)) {
             totalAmount = data.reduce((acumulador, transaccion) => {
                 const montoNumerico = parseFloat(transaccion.monto.replace(/[^0-9.-]/g, ''));
-                if (transaccion.icono === "uparrow") {
-                    return acumulador + montoNumerico;
-                } else if (transaccion.icono === "reddownarrow") {
-                    return acumulador - montoNumerico;
-                }
-                return acumulador;
+                return acumulador + montoNumerico
             }, 0);
 
             setTotalBalance(totalAmount)
