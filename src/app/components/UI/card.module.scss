@@ -27,10 +27,19 @@
 
 .amountContainer p {
   margin: 23px 13px;
+  display: flex;
+  align-items: center;
+  line-height: 39px;
 }
 
 .amountContainer span {
-  font-weight: bold;
+  height: 39px;
+  font-size: 32px;
+  line-height: 39px;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  margin-left: 14px;
 }
 
 .campaignContainer {
