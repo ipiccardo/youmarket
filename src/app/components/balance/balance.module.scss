@@ -2,28 +2,55 @@
   max-width: 428px;
   height: 762px;
   margin-top: 64px;
-}
-
-.balanceContainer p {
-  font-family: "Montserrat";
-  margin-left: 12px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17.07px;
-  width: 40px;
-  height: 17px;
-  margin-top: 7px;
-  text-align: center;
-}
-
-.balanceContainer form {
-  max-width: 428px;
-  height: 173px;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
+  p {
+    font-family: "Montserrat";
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17.07px;
+    width: 40px;
+    height: 17px;
+    margin-top: 7px;
+    text-align: center;
+  }
+  form {
+    max-width: 428px;
+    height: 173px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  input {
+    width: 105px;
+    height: 63px;
+    font-size: 22px;
+    line-height: 58.51px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    background-color: inherit;
+    border: 0;
+  }
+  label {
+    position: absolute;
+    font-size: 48px;
+    line-height: 58.51px;
+    font-weight: 400;
+    transition: opacity 0.3s;
+  }
+  input:focus + label,
+  input:valid + label {
+    opacity: 0;
+    pointer-events: none;
+  }
+  div {
+    max-width: 428px;
+    height: 173px;
+  }
 }
 
 .span {
@@ -33,48 +60,17 @@
   align-items: center;
 }
 
-.balanceContainer input {
-  width: 105px;
-  height: 63px;
-  font-size: 22px;
-  line-height: 58.51px;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  outline: none;
-  background-color: inherit;
-  border: 0;
-}
-
-.balanceContainer label {
-  position: absolute;
-  font-size: 48px;
-  line-height: 58.51px;
-  font-weight: 400;
-  transition: opacity 0.3s;
-}
-
-.balanceContainer input:focus + label,
-.balanceContainer input:valid + label {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.balanceContainer div {
-  max-width: 428px;
-  height: 173px;
-}
-
 .buttonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.buttonContainer button div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  button {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
 }

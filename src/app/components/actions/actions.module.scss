@@ -1,37 +1,37 @@
+@import "../../styles/base";
+
 .iconContaier {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    height: 200px;
-    max-width: 428px;
-    gap: 15px;
-    margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 200px;
+  max-width: 428px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
-.actionsContainer{
-margin-top: 15px;
-}
-
-.actionsContainer p {
+.actionsContainer {
+  margin-top: 15px;
+  p {
     margin-left: 15px;
+  }
 }
 
 .divIcon {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-}
-
-.divIcon p{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  p {
     font-size: 12px;
     text-align: center;
     font-weight: 700;
     line-height: 14.63px;
     margin: 0 auto;
-    color: #FF7500;
+    color: map-get($colors, action);
     text-decoration: underline;
+  }
 }

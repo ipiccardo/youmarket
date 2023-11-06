@@ -1,43 +1,39 @@
+@import "../../styles/base";
 
 .movementsContainer {
-    max-width: 428px;
-    height: 400px;
-}
+  max-width: 428px;
+  height: 400px;
 
-
-.movementsContainer > p {
+  > p {
     margin-left: 14px;
     font-size: 18px;
     line-height: 21.94px;
     text-align: center;
     width: 201px;
     font-weight: 700;
+  }
 }
 
+.movement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 387px;
+  border-bottom: $border-secondary;
+  height: 70px;
+  gap: 74px;
+  margin: 0 auto;
 
-.movement{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 387px;
-    border-bottom: 1px solid #C4C4C4;
-    height: 70px;
-    gap: 74px;
-    margin: 0 auto;
-}
-
-.movement div:first-child {
+  div:first-child {
     display: flex;
     align-items: center;
     gap: 9px;
-}
-
-
-
-.movement div:last-child {
+  }
+  div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 106px;
+  }
 }

@@ -1,3 +1,5 @@
+@import "../../styles/base";
+
 .yourAccountsContainer {
   max-width: 428px;
   height: 534px;
@@ -31,7 +33,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: map-get($colors, text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,36 +49,36 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-}
 
-.dataContainer p {
-  font-size: 12px;
-  line-height: 14.63px;
-  font-weight: 400;
+  p {
+    font-size: 12px;
+    line-height: 14.63px;
+    font-weight: 400;
+  }
 }
 
 .checked {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #f9f8f8;
+  background-color: map-get($colors, backgroundWhite);
   margin-right: 23px;
   border: none;
   cursor: pointer;
 }
 
 .widthDecoration {
-  border-bottom: 1px solid black;
+  border-bottom: $border-default;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: center;
-}
 
-.buttonContainer button {
-  width: 280px;
-  height: 65px;
-  border-radius: 360px;
-  margin-bottom: 28px;
+  button {
+    width: 280px;
+    height: 65px;
+    border-radius: 360px;
+    margin-bottom: 28px;
+  }
 }

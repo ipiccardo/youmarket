@@ -48,7 +48,7 @@ function Form() {
                 {inputRefs.map((inputRef: any, index: number) => {
                     return (
                         <input
-                            key={new Date().getTime() + index}
+                            key={index}
                             type="text"
                             inputMode='numeric'
                             value={values[index]}

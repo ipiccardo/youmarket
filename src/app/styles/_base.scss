@@ -1,0 +1,16 @@
+// _base.scss
+
+$colors: (
+  base-color: #01ad87,
+  secondary_color: #c4c4c4,
+  text-primary: #ffffff,
+  backgroundPrimary: #eeeeee,
+  backgroundWhite: #f9f8f8,
+  backgoundSecondary: #e5e5e5,
+  action: #ff7500,
+  black-primary: black,
+  text-error: red,
+);
+
+$border-default: 1px solid map-get($colors, black-primary);
+$border-secondary: 1px solid map-get($colors, secondary_color);
