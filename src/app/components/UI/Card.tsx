@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import classes from "./card.module.scss";
 import Icon from './icon/icon';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 interface DataProps {
@@ -15,7 +17,7 @@ interface DataProps {
 
 const Card = () => {
 
-    const [data, setData] = useState<DataProps[]>([])
+    const [data, setData] = useState<DataProps[]>()
     const [totalBalance, setTotalBalance] = useState(0)
     let totalAmount = 0
 
@@ -51,7 +53,9 @@ const Card = () => {
     return (
         <div className={classes.cardContainer}>
             <div className={classes.amountContainer}>
-                <p>Mi Saldo: <span>${`${totalBalance.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })}.00`}</span></p>
+                <p>Mi Saldo:  {data ? (<span>${`${totalBalance.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })}.00`}</span>) :
+                    <Skeleton />}
+                </p>
             </div>
             <div className={classes.campaignContainer}>
                 <p>Mi acción: <span>Nombre de Acción</span></p>
