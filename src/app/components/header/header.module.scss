@@ -20,5 +20,8 @@
     position: absolute;
     left: 20px;
     top: 45px;
+    @include media-min-width(40rem) {
+      left: 200px;
+    }
   }
 }

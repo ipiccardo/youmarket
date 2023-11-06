@@ -14,3 +14,9 @@ $colors: (
 
 $border-default: 1px solid map-get($colors, black-primary);
 $border-secondary: 1px solid map-get($colors, secondary_color);
+
+@mixin media-min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

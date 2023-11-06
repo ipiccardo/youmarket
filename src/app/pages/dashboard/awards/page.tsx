@@ -2,10 +2,11 @@ import Button from '@/app/components/UI/Button'
 import AwardList from '@/app/components/awardList/AwardList'
 import NewAcounts from '@/app/components/newAcounts/NewAcounts'
 import React from 'react'
+import classes from './awards.module.scss'
 
 const Awards = () => {
     return (
-        <div>
+        <div className={classes.awardsContainer}>
             <NewAcounts />
             <AwardList />
         </div>

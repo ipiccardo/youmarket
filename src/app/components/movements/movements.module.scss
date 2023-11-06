@@ -1,7 +1,7 @@
 @import "../../styles/base";
 
 .movementsContainer {
-  max-width: 428px;
+  max-width: 320px;
   height: 400px;
 
   > p {
@@ -11,6 +11,17 @@
     text-align: center;
     width: 201px;
     font-weight: 700;
+  }
+
+  @include media-min-width(400px) {
+    max-width: 428px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  @include media-min-width(40rem) {
+    max-width: 600px;
   }
 }
 
@@ -23,6 +34,12 @@
   height: 70px;
   gap: 74px;
   margin: 0 auto;
+
+  @include media-min-width(40rem) {
+    margin: 0;
+    justify-content: space-between;
+    max-width: 600px;
+  }
 
   div:first-child {
     display: flex;

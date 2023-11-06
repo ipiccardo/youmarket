@@ -24,7 +24,6 @@ const Header = () => {
         }
     }, [pathName])
 
-
     return (
         <div className={styles.headerContainer}>
             {title !== '¡Hola Test!' && title !== '' ?

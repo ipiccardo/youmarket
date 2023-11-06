@@ -1,7 +1,7 @@
 @import "../../styles/base";
 
 .cardContainer {
-  max-width: 400px;
+  max-width: 320px;
   height: 140px;
   border-radius: 10px;
   background-color: map-get($colors, backgroundWhite);
@@ -10,6 +10,14 @@
   flex-direction: column;
   margin-top: 10px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+
+  @include media-min-width(410px) {
+    max-width: 400px;
+  }
+
+  @include media-min-width(40rem) {
+    max-width: 600px;
+  }
 }
 
 .amountContainer {
@@ -30,6 +38,11 @@
   height: 70px;
   display: flex;
   justify-content: space-between;
+
+  @include media-min-width(40rem) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .campaignContainer p {
@@ -46,4 +59,8 @@
   justify-content: center;
   padding: 5px;
   margin-top: 5px;
+
+  @include media-min-width(40rem) {
+    padding: 25px;
+  }
 }
