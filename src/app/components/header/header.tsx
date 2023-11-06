@@ -33,7 +33,7 @@ const Header = () => {
                     </div>
                 ) : ''
             }
-            {title}
+            {title === '¡Hola Test!' && !pathName.includes('pages') ? '' : title}
         </div>
     )
 }
