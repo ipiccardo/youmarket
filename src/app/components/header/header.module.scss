@@ -9,13 +9,19 @@
   font-size: 16px;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding-bottom: 15px;
   gap: 20px;
 
   div:first-child {
     cursor: pointer;
     height: 20px;
-    padding: 20px;
+    position: absolute;
+    left: 10px;
+
+    @include media-min-width(1000px) {
+      left: 30%;
+    }
   }
   svg {
     padding: 5px;
