@@ -1,4 +1,6 @@
-import Icon from '../UI/icon/icon'
+'use client'
+
+import Icon from '../UI/icon/Icon'
 import classes from './newAcounts.module.scss'
 import modules from '../actions/actions.module.scss'
 

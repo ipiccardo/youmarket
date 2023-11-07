@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 import classes from './input.module.scss'
-import Icon from './icon/icon'
+import Icon from './icon/Icon'
 
 const Input = ({ searchTerm, setSearchTerm }: any) => {
     return (

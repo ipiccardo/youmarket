@@ -8,20 +8,16 @@
   line-height: 19.5px;
   font-size: 16px;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   padding-bottom: 15px;
+  gap: 20px;
 
-  div {
+  div:first-child {
     cursor: pointer;
+    height: 20px;
+    padding: 20px;
   }
   svg {
     padding: 5px;
-    position: absolute;
-    left: 20px;
-    top: 45px;
-    @include media-min-width(40rem) {
-      left: 200px;
-    }
   }
 }

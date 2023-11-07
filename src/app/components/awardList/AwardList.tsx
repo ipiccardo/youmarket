@@ -1,10 +1,12 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import classes from './awardList.module.scss'
+import styles from './awardList.module.scss'
 import { renderAccount } from '@/app/utils/generalFunctions'
 import Input from '../UI/Input'
 import Button from '../UI/Button'
-import Link from 'next/link'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 
 const AwardList = () => {
@@ -13,10 +15,14 @@ const AwardList = () => {
     const [filteredList, setFilteredList] = useState([]);
     const [activeButtonIndex, setActiveButtonIndex] = useState<number | undefined>(0);
     const [isChecked, setIsChecked] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
 
     useEffect(() => {
-        fetch('/api/newaccounts').then((resp) => resp.json()).then((data) => setList(data))
+        fetch('/api/newaccounts').then((resp) => resp.json()).then((data) => {
+            setList(data)
+            setIsLoading(false)
+        })
     }, [])
 
     useEffect(() => {
@@ -44,15 +50,38 @@ const AwardList = () => {
 
     }, [activeButtonIndex, isChecked])
 
+
+    console.log(isLoading, 'is loading')
+
+
     return (
         <>
             <Input searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            <div className={classes.yourAccountsContainer}>
+            <div className={styles.yourAccountsContainer}>
                 <p>Tus Cuentas</p>
-                {filteredList.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))}
-                {!filteredList.length && list.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))}
+                {isLoading ? (
+                    Array(5).fill(null)
+                        .map((_, index) => (
+                            <div className={styles.list} key={index}>
+                                <div>
+                                    <Skeleton width={40} height={40} />
+                                    <p>
+                                        <Skeleton width={100} />
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <Skeleton width={60} />
+                                    </p>
+                                </div>
+                            </div>
+                        ))
+                ) :
+                    filteredList.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))
+                }
+
             </div>
-            <div className={classes.buttonContainer}>
+            <div className={styles.buttonContainer}>
                 <Button text={'CONTINUAR'} secondaryButton={true} href='/' />
             </div>
 

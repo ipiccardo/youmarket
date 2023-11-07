@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import classes from "./card.module.scss";
-import Icon from './icon/icon';
+import Icon from './icon/Icon';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 

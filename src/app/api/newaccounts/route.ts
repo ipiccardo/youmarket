@@ -1,7 +1,6 @@
-import { type NextRequest } from "next/server";
 import fs from "fs";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const jsonData = fs.readFileSync("./public/accounts.json", "utf-8");
     const data = JSON.parse(jsonData);

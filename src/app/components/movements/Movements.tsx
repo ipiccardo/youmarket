@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import classes from './movements.module.scss'
-import Icon from '../UI/icon/icon';
+import Icon from '../UI/icon/Icon';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 

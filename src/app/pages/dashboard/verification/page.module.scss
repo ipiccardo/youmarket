@@ -10,14 +10,14 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 134px;
-
-  @include media-min-width(40rem) {
-    margin-top: 0;
-  }
+  margin-top: 102px;
 
   @include media-min-width(380px) {
     width: 381px;
+  }
+
+  @include media-min-width(40rem) {
+    margin-top: 50px;
   }
 }
 

@@ -1,6 +1,5 @@
-"use client";
+'use client'
 
-import { IconProps } from "@/app/types";
 import Gift from "./icons/Gift";
 import Movements from "./icons/Movements";
 import Recharge from "./icons/Recharge";
@@ -12,9 +11,16 @@ import AddAcount from "./icons/AddAcount";
 import Upload from "./icons/Upload";
 import SearchIcon from "./icons/SearchIcon";
 import BackArrow from "./icons/BackArrow";
+import React from 'react';
 
 
-const Icons = (name: string | any, size: number) => {
+
+type IconProps = {
+    name: string;
+    size: number;
+};
+
+const Icon: React.FC<IconProps> = ({ name, size }) => {
     switch (name) {
         case "settings":
             return <Settings size={size} />;
@@ -30,8 +36,6 @@ const Icons = (name: string | any, size: number) => {
             return <RedDownArrow size={size} />;
         case "uparrow":
             return <UpArrow size={size} />;
-        case "uparrow":
-            return <UpArrow size={size} />;
         case "addacount":
             return <AddAcount size={size} />;
         case "upload":
@@ -39,19 +43,12 @@ const Icons = (name: string | any, size: number) => {
         case "search":
             return <SearchIcon size={size} />;
         case "back":
-            return <BackArrow size={size} />
+            return <BackArrow size={size} />;
         default:
-            return '';
+            return null;
     }
 };
 
-/**
- * @param name Nombre del icono
- * @param size Tamaño del icono
- * @param onClick Función a ejecutar al hacer click
- */
+export default Icon;
 
-export default function Icon({ name, size = 20, onClick }: IconProps) {
 
-    return Icons(name, size);
-}

@@ -1,3 +1,5 @@
+'use client'
+
 export type IconProps = {
     name:
     | "settings"

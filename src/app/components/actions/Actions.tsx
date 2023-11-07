@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Icon from '../UI/icon/icon'
+import Icon from '../UI/icon/Icon'
 import classes from './actions.module.scss'
 import Movements from '../movements/Movements'
 import Link from 'next/link'

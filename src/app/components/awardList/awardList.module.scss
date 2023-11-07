@@ -2,7 +2,7 @@
 
 .yourAccountsContainer {
   max-width: 428px;
-  height: 534px;
+  height: 524px;
 }
 
 .yourAccountsContainer > p {
@@ -80,5 +80,35 @@
     height: 65px;
     border-radius: 360px;
     margin-bottom: 28px;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 387px;
+  height: 70px;
+  gap: 74px;
+  margin: 0 auto;
+
+  @include media-min-width(40rem) {
+    margin: 0;
+    justify-content: space-between;
+    max-width: 600px;
+    padding: 1.5rem;
+  }
+
+  div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
   }
 }
