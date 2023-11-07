@@ -6,7 +6,6 @@ import { store } from '@/app/context/context';
 
 type NumberArray = (number | '' | any)[];
 
-
 function Form() {
     const inputRefs: any = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
     const [values, setValues] = useState<NumberArray>(['', '', '', '', '', '']);

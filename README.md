@@ -1,3 +1,29 @@
+# Challenge Youmarket
+
+Este proyecto resuelve el desafío Youmarket y utiliza las siguientes tecnologías:
+
+- React
+- Next.js
+- SASS
+- Consumo de datos de la API de Next
+- Envío de correos electrónicos con SMTP
+
+## Cómo usar la aplicación
+
+### Iniciar sesión
+
+Al iniciar sesión en la aplicación, recibirás un correo electrónico con un PIN de 6 números. Deberás ingresar este PIN en la pantalla de verificación. Si por alguna razón no recibes el correo electrónico, puedes usar el siguiente código de verificación: `987654`.
+
+### Recarga de saldo
+
+En la pantalla de saldo, tienes la opción de agregar fondos a tu cuenta. Simplemente sigue los siguientes pasos:
+
+1. Ve a la pantalla de saldo.
+2. Ingresa la cantidad de saldo que deseas agregar.
+3. Confirma la operación y tu saldo se actualizará en tu cuenta.
+
+¡Disfruta de la aplicación Youmarket!
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
