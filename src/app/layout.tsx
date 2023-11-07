@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './styles/globals.scss'
 import Header from './components/header/Header'
 import Head from 'next/head'
 import ThemeContextProvider from "./context/context";
 
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Montserrat({ weight: ['400', '500', '600', '700'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
