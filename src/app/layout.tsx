@@ -6,7 +6,7 @@ import Head from 'next/head'
 import ThemeContextProvider from "./context/context";
 
 
-const inter = Montserrat({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <Head>
         <link
           rel="preconnect"
@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </Head>
 
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body suppressHydrationWarning={true}>
         <ThemeContextProvider>
           <Header />
           {children}

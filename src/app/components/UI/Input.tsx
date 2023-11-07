@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react'
 import classes from './input.module.scss'
 import IconHandler from './icon/IconHandler'
