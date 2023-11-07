@@ -1,13 +1,19 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Button from '../UI/Button'
 import styles from './login.module.scss'
+import { generarNumeroAleatorio } from '@/app/utils/generalFunctions'
+import { store } from '@/app/context/context'
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [blur, setBlur] = useState(false)
+
+    const context = useContext(store)
+
+    const { pin, setPin }: any = context
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newEmail = e.target.value;
@@ -20,6 +26,35 @@ const Login = () => {
         }
     };
 
+    const sendEmail = async (correo: string) => {
+        try {
+            const response = await fetch('/api/server', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ destinatario: correo, asunto: 'Asunto del correo', contenido: pin }),
+            });
+
+            const data = await response.json();
+            if (data.message === 'Correo enviado con éxito') {
+            } else {
+                console.error('Error al enviar el correo:', data.message);
+            }
+        } catch (error) {
+            console.error('Error al enviar el correo:', error);
+        }
+    };
+
+
+    useEffect(() => {
+        const newNumber = generarNumeroAleatorio()
+        setPin(newNumber)
+    }, [generarNumeroAleatorio])
+
+
+
+
     const handleShowError = () => {
         if (error || email === '') {
             setError('Ingrese una dirección de correo electrónico válida.')
@@ -27,6 +62,7 @@ const Login = () => {
             setEmail('ejemplo@hotmail.com')
         } else {
             setError('')
+            sendEmail(email)
         }
     }
 

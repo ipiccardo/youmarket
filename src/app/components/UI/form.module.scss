@@ -36,8 +36,11 @@
   justify-content: center;
   margin: 0 auto;
 
+  .textError span {
+    color: map-get($colors, text-error);
+  }
+
   @include media-min-width(380px) {
     width: 381px;
-    // gap: 18px;
   }
 }

@@ -1,7 +1,8 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import classes from "./form.module.scss";
 import Button from './Button';
+import { store } from '@/app/context/context';
 
 type NumberArray = (number | '' | any)[];
 
@@ -9,7 +10,13 @@ type NumberArray = (number | '' | any)[];
 function Form() {
     const inputRefs: any = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
     const [values, setValues] = useState<NumberArray>(['', '', '', '', '', '']);
-    const [focusSeted, setFocusSeted] = useState<boolean>(false)
+    const [focusSeted, setFocusSeted] = useState<boolean>(false);
+    const [isValid, setIsValid] = useState<boolean>(false);
+    const [inputFinalValue, setInputFinalValue] = useState('');
+
+    const context = useContext(store)
+
+    const { pin }: any = context
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
 
@@ -38,8 +45,26 @@ function Form() {
                     return
                 })
             }
+
         }
     }
+
+    useEffect(() => {
+        const pinAsString = pin.toString();
+        const unifiedValues = values.join('');
+        setInputFinalValue(unifiedValues);
+        const isValueEqualPIN = unifiedValues === pinAsString;
+        setIsValid(isValueEqualPIN);
+    }, [values, pin]);
+
+
+    const handleInputFocus = (index: number) => {
+        const newValues = [...values];
+        if (newValues[index] !== '') {
+            newValues[index] = '';
+            setValues(newValues);
+        }
+    };
 
 
     return (
@@ -53,6 +78,7 @@ function Form() {
                             inputMode='numeric'
                             value={values[index]}
                             onChange={(e) => handleChange(e, index)}
+                            onFocus={() => handleInputFocus(index)}
                             ref={inputRef}
                             min={0}
                             max={9}
@@ -61,7 +87,8 @@ function Form() {
                 })
                 }
             </div>
-            <Button href={'/pages'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} />
+            <Button href={'/pages'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} disabled={!isValid} />
+            {isValid ? null : <p className={classes.textError}>{inputFinalValue.length >= 6 ? <span>El código es incorrecto.</span> : ''}</p>}
         </form>
     );
 }

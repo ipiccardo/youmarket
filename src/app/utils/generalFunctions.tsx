@@ -35,3 +35,9 @@ export const renderAccount = (e: any, index: number, handleButtonClick: any, act
         </button>
     </div>
 );
+
+
+
+export function generarNumeroAleatorio() {
+    return Math.floor(Math.random() * 900000) + 100000;
+}

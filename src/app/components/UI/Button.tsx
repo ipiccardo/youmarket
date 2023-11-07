@@ -6,7 +6,7 @@ import { buttonProps } from "@/app/types";
 
 
 
-const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag, onClick }: buttonProps): JSX.Element => {
+const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag, onClick, disabled }: buttonProps): JSX.Element => {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Button = ({ href, classNameButton, classNameContent, text, secondaryButton
 
     return (
         <Link href={href}>
-            <button onClick={onClick} ref={buttonRef} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
+            <button disabled={disabled ? true : false} onClick={onClick} ref={buttonRef} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
                 <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
             </button>
         </Link>

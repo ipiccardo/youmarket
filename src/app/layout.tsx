@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './styles/globals.scss'
 import Header from './components/header/Header'
 import Head from 'next/head'
+import ThemeContextProvider from "./context/context";
 
 
 
@@ -32,8 +33,10 @@ export default function RootLayout({
       </Head>
 
       <body suppressHydrationWarning={true} className={inter.className}>
-        <Header />
-        {children}
+        <ThemeContextProvider>
+          <Header />
+          {children}
+        </ThemeContextProvider>
       </body>
     </html>
   )

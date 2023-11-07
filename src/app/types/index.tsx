@@ -49,6 +49,7 @@ export interface buttonProps {
     secondaryButton?: boolean;
     flag?: boolean;
     onClick?: any;
+    disabled?: boolean
 }
 
 
