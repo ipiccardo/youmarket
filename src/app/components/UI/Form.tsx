@@ -6,12 +6,15 @@ import { store } from '@/app/context/context';
 
 type NumberArray = (number | '' | any)[];
 
+
+
 function Form() {
     const inputRefs: any = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
     const [values, setValues] = useState<NumberArray>(['', '', '', '', '', '']);
     const [focusSeted, setFocusSeted] = useState<boolean>(false);
     const [isValid, setIsValid] = useState<boolean>(false);
     const [inputFinalValue, setInputFinalValue] = useState('');
+    const keyValid = '987654'
 
     const context = useContext(store)
 
@@ -65,7 +68,6 @@ function Form() {
         }
     };
 
-
     return (
         <form className={classes.formContainer}>
             <div className={classes.inputsContainer}>
@@ -86,8 +88,8 @@ function Form() {
                 })
                 }
             </div>
-            <Button href={'/pages'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} disabled={!isValid} />
-            {isValid ? null : <p className={classes.textError}>{inputFinalValue.length >= 6 ? <span>El código es incorrecto.</span> : ''}</p>}
+            <Button href={'/pages'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} disabled={!isValid && inputFinalValue !== keyValid} />
+            {isValid || keyValid === inputFinalValue ? null : <p className={classes.textError}>{inputFinalValue.length >= 6 ? <span>El código es incorrecto.</span> : ''}</p>}
         </form>
     );
 }
