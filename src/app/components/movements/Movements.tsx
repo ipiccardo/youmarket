@@ -4,18 +4,14 @@ import classes from './movements.module.scss'
 import Icon from '../UI/icon/Icon';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { DataProps } from '@/app/types';
 
 
-interface Item {
-    icono: string;
-    texto: string;
-    monto: string;
-    fecha: string;
-}
+
 
 function Movements() {
-    const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [data, setData] = useState<DataProps[]>([]);
+    const [isLoading, setIsLoading] = useState<Boolean>(true);
 
     useEffect(() => {
         fetch('/api')
@@ -53,7 +49,7 @@ function Movements() {
                         </div>
                     ))
             ) : (
-                data.map((item: Item, index) => (
+                data.map((item: DataProps, index) => (
                     <div className={classes.movement} key={index}>
                         <div>
                             <Icon key={new Date().getTime() + index} name={item.icono} size={40} />

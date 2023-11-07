@@ -33,7 +33,9 @@ const Header = () => {
                     </div>
                 ) : ''
             }
-            {title === '¡Hola Test!' && !pathName.includes('pages') ? '' : title}
+            <div className={styles.titleContainer}>
+                {title === '¡Hola Test!' && !pathName.includes('pages') ? '' : title}
+            </div>
         </div>
     )
 }

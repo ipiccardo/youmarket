@@ -12,15 +12,12 @@ import Upload from "./icons/Upload";
 import SearchIcon from "./icons/SearchIcon";
 import BackArrow from "./icons/BackArrow";
 import React from 'react';
+import { IconsProps } from "@/app/types";
 
 
 
-type IconProps = {
-    name: string;
-    size: number;
-};
 
-const Icon: React.FC<IconProps> = ({ name, size }) => {
+const Icon: React.FC<IconsProps> = ({ name, size }) => {
     switch (name) {
         case "settings":
             return <Settings size={size} />;

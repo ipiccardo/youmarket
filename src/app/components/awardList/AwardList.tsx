@@ -6,13 +6,13 @@ import Input from '../UI/Input'
 import Button from '../UI/Button'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-
+import { acountPropTypes } from '@/app/types'
 
 
 const AwardList = () => {
-    const [list, setList] = useState([])
-    const [searchTerm, setSearchTerm] = useState('');
-    const [filteredList, setFilteredList] = useState([]);
+    const [list, setList] = useState<acountPropTypes[]>([])
+    const [searchTerm, setSearchTerm] = useState<string>('');
+    const [filteredList, setFilteredList] = useState<acountPropTypes[]>([]);
     const [activeButtonIndex, setActiveButtonIndex] = useState<number | undefined>(0);
     const [isChecked, setIsChecked] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
@@ -26,7 +26,7 @@ const AwardList = () => {
     }, [])
 
     useEffect(() => {
-        const filtered = list.filter((item: any) => {
+        const filtered = list.filter((item: acountPropTypes) => {
             const fullName = item.name.toLowerCase() + item.mail.toLowerCase();
             return fullName.startsWith(searchTerm.toLowerCase());
         });
@@ -34,13 +34,13 @@ const AwardList = () => {
     }, [searchTerm, list]);
 
 
-    const handleButtonClick = (index: any) => {
+    const handleButtonClick = (index: number) => {
         setActiveButtonIndex(index);
         setIsChecked(!isChecked)
     };
 
     useEffect(() => {
-        filteredList.map((element: any, index: number) => {
+        filteredList.map((element: acountPropTypes, index: number) => {
             if (activeButtonIndex === index && element.checked === false) {
                 return element.checked = true
             } else {
@@ -49,10 +49,6 @@ const AwardList = () => {
         })
 
     }, [activeButtonIndex, isChecked])
-
-
-    console.log(isLoading, 'is loading')
-
 
     return (
         <>
@@ -77,7 +73,7 @@ const AwardList = () => {
                             </div>
                         ))
                 ) :
-                    filteredList.map((e: any, index) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))
+                    filteredList.map((e: acountPropTypes, index: number) => renderAccount(e, index, handleButtonClick, activeButtonIndex, filteredList))
                 }
 
             </div>

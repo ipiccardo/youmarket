@@ -7,7 +7,7 @@ const Balance = () => {
 
     const [newValue, setNewValue] = useState('')
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
         const numericValue = inputValue.replace(/[^0-9.]/g, '');
 
@@ -17,7 +17,7 @@ const Balance = () => {
         setNewValue(formattedValue);
     };
 
-    const handleSend = async (e: any) => {
+    const handleSend = async () => {
 
         const currentDate = new Date();
         const day = currentDate.getDate().toString().padStart(2, '0');

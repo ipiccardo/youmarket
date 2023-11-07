@@ -11,7 +11,7 @@ function Form() {
     const [values, setValues] = useState<NumberArray>(['', '', '', '', '', '']);
     const [focusSeted, setFocusSeted] = useState<boolean>(false)
 
-    const handleChange = (e: any, index: number) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
 
         if ((/^\d$/.test(e.target.value)) || e.target.value === '') {
             setValues((prevValues) => {
@@ -45,7 +45,7 @@ function Form() {
     return (
         <form className={classes.formContainer}>
             <div className={classes.inputsContainer}>
-                {inputRefs.map((inputRef: any, index: number) => {
+                {inputRefs.map((inputRef: React.RefObject<HTMLInputElement>, index: number) => {
                     return (
                         <input
                             key={index}

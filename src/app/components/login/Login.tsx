@@ -9,7 +9,7 @@ const Login = () => {
     const [error, setError] = useState('');
     const [blur, setBlur] = useState(false)
 
-    const handleEmailChange = (e: any) => {
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newEmail = e.target.value;
         setEmail(newEmail);
         if (!/^\S+@\S+\.\S+$/.test(newEmail)) {
@@ -20,7 +20,7 @@ const Login = () => {
         }
     };
 
-    const handleShowError = (e: any) => {
+    const handleShowError = () => {
         if (error || email === '') {
             setError('Ingrese una dirección de correo electrónico válida.')
             setBlur(true)

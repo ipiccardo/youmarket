@@ -2,18 +2,11 @@
 import React, { useEffect, useRef } from "react";
 import classes from "./button.module.scss";
 import Link from "next/link";
+import { buttonProps } from "@/app/types";
 
-interface Props {
-    href: string;
-    classNameContent?: string;
-    classNameButton?: string;
-    text: string;
-    secondaryButton?: boolean;
-    flag?: boolean;
-    onClick?: any;
-}
 
-const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag, onClick }: Props): JSX.Element => {
+
+const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag, onClick }: buttonProps): JSX.Element => {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {

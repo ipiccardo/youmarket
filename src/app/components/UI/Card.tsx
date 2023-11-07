@@ -4,14 +4,7 @@ import classes from "./card.module.scss";
 import Icon from './icon/Icon';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-
-
-interface DataProps {
-    icono: string,
-    texto: string,
-    monto: string,
-    fecha: string
-}
+import { DataProps } from '@/app/types';
 
 
 
