@@ -10,6 +10,8 @@ $colors: (
   action: #ff7500,
   black-primary: black,
   text-error: red,
+  hover-primary: #f0f0f0,
+  border-color: #ccc,
 );
 
 $border-default: 1px solid map-get($colors, black-primary);

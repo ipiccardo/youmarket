@@ -48,6 +48,7 @@
   height: 70px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   @include media-min-width(40rem) {
     width: 100%;
@@ -69,8 +70,41 @@
   justify-content: center;
   padding: 5px;
   margin-top: 5px;
+  cursor: pointer;
 
   @include media-min-width(40rem) {
     padding: 25px;
   }
+}
+
+.dropdownMenu {
+  list-style: none;
+  background-color: map-get($colors, text-primary);
+  border: 1px solid map-get($colors, border-color);
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  top: 55px;
+
+  li {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: map-get($colors, hover-primary);
+    }
+  }
+}
+
+.downarrow svg {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.rotated svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
 }
