@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import classes from "./card.module.scss";
-import Icon from './icon/Icon';
+import IconHandler from './icon/IconHandler';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { DataProps } from '@/app/types';
@@ -78,7 +78,7 @@ const Card = () => {
             <div className={classes.campaignContainer}>
                 <p>Mi acción: <span className={classes.dropdownToggle}>{selectedAction}</span></p>
                 <div className={`${classes.iconContainer} ${isDropdownOpen ? classes.rotated : classes.downarrow}`} onClick={toggleDropdown}>
-                    <Icon name={'downarrow'} size={20} />
+                    <IconHandler name={'downarrow'} size={20} />
                 </div>
                 {isDropdownOpen && (
                     <ul className={classes.dropdownMenu}>

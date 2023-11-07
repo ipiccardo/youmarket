@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss'
 import { usePathname, useRouter } from 'next/navigation';
-import Icon from '../UI/icon/Icon';
+import IconHandler from '../ui/icon/IconHandler';
 
 const Header = () => {
     const [title, setTitle] = useState('')
@@ -29,7 +29,7 @@ const Header = () => {
             {title !== '¡Hola Test!' && title !== '' ?
                 (
                     <div onClick={() => router.back()}>
-                        <Icon name='back' size={40} />
+                        <IconHandler name='back' size={40} />
                     </div>
                 ) : ''
             }

@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import classes from './movements.module.scss'
-import Icon from '../UI/icon/Icon';
+import IconHandler from '../ui/icon/IconHandler';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { DataProps } from '@/app/types';
@@ -52,7 +52,7 @@ function Movements() {
                 data.map((item: DataProps, index) => (
                     <div className={classes.movement} key={index}>
                         <div>
-                            <Icon key={new Date().getTime() + index} name={item.icono} size={40} />
+                            <IconHandler key={new Date().getTime() + index} name={item.icono} size={40} />
                             <p> {item.texto}</p>
                         </div>
                         <div>

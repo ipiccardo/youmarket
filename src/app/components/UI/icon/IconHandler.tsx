@@ -17,7 +17,7 @@ import { IconsProps } from "@/app/types";
 
 
 
-const Icon: React.FC<IconsProps> = ({ name, size }) => {
+const IconHandler: React.FC<IconsProps> = ({ name, size }) => {
     switch (name) {
         case "settings":
             return <Settings size={size} />;
@@ -46,6 +46,6 @@ const Icon: React.FC<IconsProps> = ({ name, size }) => {
     }
 };
 
-export default Icon;
+export default IconHandler;
 
 

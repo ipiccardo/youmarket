@@ -1,6 +1,6 @@
 'use client'
 
-import Icon from '../UI/icon/Icon'
+import IconHandler from '../ui/icon/IconHandler'
 import classes from './newAcounts.module.scss'
 import modules from '../actions/actions.module.scss'
 
@@ -16,7 +16,7 @@ const NewAcounts = () => {
                 {icons.map((icon, index) => {
                     return (
                         <div key={new Date().getTime() + index} className={modules.divIcon}>
-                            <Icon key={new Date().getTime() + index} name={icon.name} size={40} />
+                            <IconHandler key={new Date().getTime() + index} name={icon.name} size={40} />
                             <p>{icon.text}</p>
                         </div>
                     )

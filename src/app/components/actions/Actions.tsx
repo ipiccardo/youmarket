@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Icon from '../UI/icon/Icon'
+import IconHandler from '../ui/icon/IconHandler'
 import classes from './actions.module.scss'
 import Movements from '../movements/Movements'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ const Actions = () => {
                         return (
                             <div key={new Date().getTime() + index} className={classes.divIcon}>
                                 <Link href={`${propValue.name === 'recharge' ? '/pages/dashboard/acredit' : 'pages'}`}>
-                                    <Icon name={propValue.name} size={45} />
+                                    <IconHandler name={propValue.name} size={45} />
                                 </Link>
                                 <p>{propValue.text}</p>
                             </div>
