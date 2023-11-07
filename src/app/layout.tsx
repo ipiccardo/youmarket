@@ -6,7 +6,7 @@ import Head from 'next/head'
 import ThemeContextProvider from "./context/context";
 
 
-const inter = Montserrat({ weight: ['400', '500', '600', '700'] })
+const inter = Montserrat({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
