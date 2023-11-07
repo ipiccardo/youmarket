@@ -1,3 +1,4 @@
+'use client'
 import { IconSVGProps } from '@/app/types';
 import classes from "./icon.module.css";
 import React from 'react'
