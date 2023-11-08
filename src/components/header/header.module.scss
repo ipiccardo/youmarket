@@ -17,7 +17,7 @@
     height: 20px;
     position: absolute;
     left: 10px;
-    color: map-get($colors, text-primary);
+    color: map-get($colors, text-primary) !important;
 
     @include media-min-width(1000px) {
       left: 30%;
@@ -26,5 +26,6 @@
 
   .titleContainer {
     position: static !important;
+    color: map-get($colors, text-primary) !important;
   }
 }

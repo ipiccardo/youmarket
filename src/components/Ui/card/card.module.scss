@@ -1,7 +1,7 @@
 @import "../../../styles/base";
 
 .cardContainer {
-  max-width: 320px;
+  max-width: 90%;
   height: 140px;
   border-radius: 10px;
   background-color: map-get($colors, backgroundWhite);
