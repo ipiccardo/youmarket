@@ -1,7 +1,7 @@
-import AwardList from '@/app/_components/awardList/AwardList'
-import NewAcounts from '@/app/_components/newAcounts/NewAcounts'
-import React from 'react'
-import classes from './awards.module.scss'
+import AwardList from '@/components/awardList/AwardList';
+import NewAcounts from '@/components/newAcounts/NewAcounts';
+import React from 'react';
+import classes from './awards.module.scss';
 
 const Awards = () => {
     return (

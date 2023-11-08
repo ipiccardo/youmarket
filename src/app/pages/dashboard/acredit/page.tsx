@@ -1,4 +1,4 @@
-import Balance from '@/app/_components/balance/Balance'
+import Balance from '@/components/balance/Balance'
 import React from 'react'
 
 const Acredit = () => {

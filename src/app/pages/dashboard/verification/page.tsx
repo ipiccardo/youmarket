@@ -1,4 +1,4 @@
-import Form from '@/app/_components/Ui/form/Form'
+import Form from '@/components/Ui/form/Form'
 import React from 'react'
 import classes from './page.module.scss'
 
