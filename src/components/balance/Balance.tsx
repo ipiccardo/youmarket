@@ -31,7 +31,7 @@ const Balance = () => {
         if (newValue === '') {
             return
         }
-        await fetch('/api/data', {
+        await fetch('/api', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ import fs from "fs";
 
 export async function GET() {
   try {
-    const jsonData = fs.readFileSync("./public/basedata.json", "utf-8");
+    const jsonData = fs.readFileSync("./public/data.json", "utf-8");
     const data = JSON.parse(jsonData);
     return new Response(JSON.stringify(data), {
       status: 200,
@@ -31,7 +31,7 @@ export async function PUT(request: any) {
   const { newData, newDate } = res;
 
   try {
-    const jsonData = fs.readFileSync("./public/basedata.json", "utf-8");
+    const jsonData = fs.readFileSync("./public/data.json", "utf-8");
     const data = JSON.parse(jsonData);
     const newObject = {
       icono: "uparrow",
@@ -40,7 +40,7 @@ export async function PUT(request: any) {
       fecha: newDate,
     };
     data.push(newObject);
-    fs.writeFileSync("./public/basedata.json", JSON.stringify(data, null, 2));
+    fs.writeFileSync("./public/data.json", JSON.stringify(data, null, 2));
     return new Response("Valor agregado correctamente", {
       status: 200,
     });
