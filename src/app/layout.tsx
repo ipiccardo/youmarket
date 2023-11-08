@@ -1,8 +1,6 @@
-'use client'
-
 import { Montserrat } from 'next/font/google'
 import './styles/globals.scss'
-import Header from './components/header/Header'
+import Header from './_components/header/Header'
 import Head from 'next/head'
 import ThemeContextProvider from "./context/context";
 

@@ -1,5 +1,3 @@
-'use client'
-
 import Gift from "./icons/Gift";
 import Movements from "./icons/Movements";
 import Recharge from "./icons/Recharge";

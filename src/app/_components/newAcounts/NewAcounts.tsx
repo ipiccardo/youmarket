@@ -1,5 +1,3 @@
-'use client'
-
 import IconHandler from '../Ui/icon/IconHandler'
 import classes from './newAcounts.module.scss'
 import modules from '../actions/actions.module.scss'

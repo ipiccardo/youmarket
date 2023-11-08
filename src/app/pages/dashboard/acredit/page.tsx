@@ -1,6 +1,4 @@
-'use client'
-
-import Balance from '@/app/components/balance/Balance'
+import Balance from '@/app/_components/balance/Balance'
 import React from 'react'
 
 const Acredit = () => {

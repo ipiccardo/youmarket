@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import IconHandler from '../Ui/icon/IconHandler'
 import classes from './actions.module.scss'
