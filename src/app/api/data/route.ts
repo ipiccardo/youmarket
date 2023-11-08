@@ -1,4 +1,3 @@
-import { type NextRequest } from "next/server";
 import fs from "fs";
 
 export async function GET() {
@@ -26,7 +25,7 @@ export async function GET() {
   }
 }
 
-export async function PUT(request: NextRequest) {
+export async function PUT(request: any) {
   const res = await request.json();
 
   const { newData, newDate } = res;
