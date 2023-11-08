@@ -1,3 +1,5 @@
+'use client'
+
 import classes from '../components/awardList/awardList.module.scss'
 
 export const extractFirstLetter = ({ name }: any) => {
