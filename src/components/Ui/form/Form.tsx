@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import classes from "./form.module.scss";
 import Button from '../button/Button'
-import { store } from '@/context/context'
+import { store } from '@/_context/context'
 
 type NumberArray = (number | '' | any)[];
 
