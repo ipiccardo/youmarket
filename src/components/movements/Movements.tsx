@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState, useEffect } from 'react';
 import classes from './movements.module.scss'
 import IconHandler from '../Ui/icon/IconHandler';

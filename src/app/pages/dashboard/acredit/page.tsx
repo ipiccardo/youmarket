@@ -1,3 +1,4 @@
+'use client'
 import Balance from '@/components/balance/Balance'
 import React from 'react'
 
