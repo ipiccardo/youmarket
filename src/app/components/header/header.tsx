@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss'
 import { usePathname, useRouter } from 'next/navigation';
-import IconHandler from '../ui/icon/IconHandler';
+import IconHandler from '../Ui/icon/IconHandler';
 
 const Header = () => {
     const [title, setTitle] = useState('')

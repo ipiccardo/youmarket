@@ -1,6 +1,6 @@
 'use client'
 
-import IconHandler from '../ui/icon/IconHandler'
+import IconHandler from '../Ui/icon/IconHandler'
 import classes from './newAcounts.module.scss'
 import modules from '../actions/actions.module.scss'
 

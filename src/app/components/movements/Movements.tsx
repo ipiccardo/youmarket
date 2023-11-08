@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import classes from './movements.module.scss'
-import IconHandler from '../ui/icon/IconHandler';
+import IconHandler from '../Ui/icon/IconHandler';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { DataProps } from '@/app/types';

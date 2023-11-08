@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import IconHandler from '../ui/icon/IconHandler'
+import IconHandler from '../Ui/icon/IconHandler'
 import classes from './actions.module.scss'
 import Movements from '../movements/Movements'
 import Link from 'next/link'

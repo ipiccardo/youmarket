@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../components/ui/card/Card'
+import Card from '../components/Ui/card/Card'
 import Actions from '../components/actions/Actions'
 
 const HomePage = () => {

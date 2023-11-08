@@ -6,11 +6,11 @@ import Recharge from "./icons/Recharge";
 import Settings from "./icons/Settings";
 import DownArrow from "./icons/DownArrow";
 import RedDownArrow from "./icons/RedDownArrow";
-import UpArrow from "./icons/UpArrow";
+import UpArrow from "./icons/UpArrow"
 import AddAcount from "./icons/AddAcount";
 import Upload from "./icons/Upload";
 import SearchIcon from "./icons/SearchIcon";
-import BackArrow from "./icons/BackArrow";
+import BackArrow from "../icon/icons/BackArrow";
 import React from 'react';
 import { IconsProps } from "@/app/types";
 
