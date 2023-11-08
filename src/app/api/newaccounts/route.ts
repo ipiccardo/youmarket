@@ -2,7 +2,7 @@ import fs from "fs";
 
 export async function GET() {
   try {
-    const jsonData = fs.readFileSync("./public/accounts.json", "utf-8");
+    const jsonData = fs.readFileSync(".public/accounts.json", "utf-8");
     const data = JSON.parse(jsonData);
     return new Response(JSON.stringify(data), {
       status: 200,

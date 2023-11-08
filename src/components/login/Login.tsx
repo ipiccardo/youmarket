@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Button from '../Ui/button/Button'
 import styles from './login.module.scss'
 import { generarNumeroAleatorio } from '@/utils/generalFunctions'
-import { store } from '@/_context/context'
+import { store } from '@/context/context'
 
 
 const Login = () => {
