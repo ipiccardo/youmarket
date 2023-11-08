@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import classes from "./form.module.scss";
-import Button from './Button';
+import Button from '../button/Button';
 import { store } from '@/app/context/context';
 
 type NumberArray = (number | '' | any)[];

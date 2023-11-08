@@ -2,7 +2,7 @@
 
 import React from 'react'
 import classes from './input.module.scss'
-import IconHandler from './icon/IconHandler'
+import IconHandler from '../icon/IconHandler'
 import { InputProps } from '@/app/types'
 
 const Input: React.FC<InputProps> = ({ searchTerm, setSearchTerm }) => {
