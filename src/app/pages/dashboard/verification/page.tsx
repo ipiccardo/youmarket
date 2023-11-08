@@ -1,3 +1,5 @@
+'use client'
+
 import Form from '@/app/components/Ui/form/Form'
 import React from 'react'
 import classes from './page.module.scss'

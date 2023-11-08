@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import Button from '../Ui/Button/Button'
+import Button from '../Ui/button/Button'
 import classes from './balance.module.scss'
 
 const Balance = () => {

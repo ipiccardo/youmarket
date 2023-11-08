@@ -1,6 +1,6 @@
 'use client'
 import React, { useContext, useEffect, useState } from 'react'
-import Button from '../Ui/Button/Button'
+import Button from '../Ui/button/Button'
 import styles from './login.module.scss'
 import { generarNumeroAleatorio } from '@/app/utils/generalFunctions'
 import { store } from '@/app/context/context'
