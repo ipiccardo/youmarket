@@ -14,7 +14,7 @@ function Movements() {
     const [isLoading, setIsLoading] = useState<Boolean>(true);
 
     useEffect(() => {
-        fetch('/api')
+        fetch('/api/data')
             .then((response) => {
                 return response.json()
             })

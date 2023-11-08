@@ -30,7 +30,7 @@ const Card = () => {
 
 
     useEffect(() => {
-        fetch('/api')
+        fetch('/api/data')
             .then((response) => {
                 return response.json()
             })
