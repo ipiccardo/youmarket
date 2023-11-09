@@ -18,7 +18,6 @@ const Card = () => {
 
     let totalAmount = 0
 
-
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
