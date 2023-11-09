@@ -49,11 +49,14 @@
   }
 }
 
-.secondaryButton:focus {
-  background-color: map-get($colors, base-color);
-}
+// .secondaryButton:focus {
+//   background-color: map-get($colors, base-color);
+// }
 
 .anchorButton {
   cursor: pointer;
-  padding: 10px;
+}
+
+.anchorButtonFocused:focus button {
+  background-color: map-get($colors, base-color);
 }

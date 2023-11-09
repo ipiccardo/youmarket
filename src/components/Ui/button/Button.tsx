@@ -7,18 +7,18 @@ import { buttonProps } from "@/types";
 
 
 const Button = ({ href, classNameButton, classNameContent, text, secondaryButton, flag, onClick, disabled }: buttonProps): JSX.Element => {
-    const buttonRef = useRef<HTMLButtonElement>(null);
+    const buttonRef = useRef<any>(null);
 
     useEffect(() => {
-        if (flag && buttonRef.current) {
+        if (flag && buttonRef.current !== null) {
             buttonRef.current.focus();
         }
     }, [flag]);
 
 
     return (
-        <Link href={href} className={classes.anchorButton}>
-            <button disabled={disabled ? true : false} onClick={onClick} ref={buttonRef} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
+        <Link href={href} className={!disabled ? `${classes.anchorButtonFocused}` : `${classes.anchorButton}`} ref={buttonRef}>
+            <button disabled={disabled ? true : false} onClick={onClick} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
                 <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
             </button>
         </Link>
