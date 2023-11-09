@@ -49,12 +49,14 @@
   }
 }
 
-// .secondaryButton:focus {
-//   background-color: map-get($colors, base-color);
-// }
-
 .anchorButton {
   cursor: pointer;
+  height: 75px;
+}
+
+.anchorButtonFocused {
+  cursor: pointer;
+  height: 75px;
 }
 
 .anchorButtonFocused:focus button {
