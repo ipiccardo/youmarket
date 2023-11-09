@@ -7,16 +7,32 @@ export async function PUT(request: NextRequest) {
   const { newData, newDate } = res;
 
   try {
-    const jsonData = fs.readFileSync("./public/data.json", "utf-8");
-    const data = JSON.parse(jsonData);
+    const response = await fetch(
+      "https://youmarket-a25af-default-rtdb.firebaseio.com/data.json"
+    ).then((resp) => resp.json());
+
+    const dataArray = Object.values(response);
+
     const newObject = {
       icono: "uparrow",
       texto: "Carga de Saldo",
       monto: `+$${newData}`,
       fecha: newDate,
     };
-    data.push(newObject);
-    fs.writeFileSync("./public/data.json", JSON.stringify(data, null, 2));
+
+    dataArray.push(newObject);
+
+    await fetch(
+      "https://youmarket-a25af-default-rtdb.firebaseio.com/data.json",
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataArray),
+      }
+    );
+
     return new Response("Valor agregado correctamente", {
       status: 200,
     });

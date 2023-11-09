@@ -1,10 +1,14 @@
-import fs from "fs";
-
 export async function GET() {
   try {
-    const jsonData = fs.readFileSync("./public/data.json", "utf-8");
-    const data = JSON.parse(jsonData);
-    return new Response(JSON.stringify(data), {
+    const response = await fetch(
+      "https://youmarket-a25af-default-rtdb.firebaseio.com/data.json"
+    )
+      .then((resp) => resp.json())
+      .then((data) => data);
+
+    const dataArray = Object.values(response);
+
+    return new Response(JSON.stringify(dataArray), {
       status: 200,
       headers: {
         "Access-Control-Allow-Origin": "*",

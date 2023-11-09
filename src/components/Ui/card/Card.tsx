@@ -28,17 +28,28 @@ const Card = () => {
     };
 
 
+    // useEffect(() => {
+    //     fetch('/api')
+    //         .then((response) => {
+    //             return response.json()
+    //         })
+    //         .then((jsonData: DataProps[]) => {
+    //             setData(jsonData)
+    //         })
+    //         .catch((error) => console.error(error));
+    // }, []);
+
+
     useEffect(() => {
-        fetch('/api')
+        fetch('https://youmarket-a25af-default-rtdb.firebaseio.com/data.json')
             .then((response) => {
                 return response.json()
             })
-            .then((jsonData: DataProps[]) => {
+            .then((jsonData) => {
                 setData(jsonData)
             })
             .catch((error) => console.error(error));
     }, []);
-
 
     useEffect(() => {
         if (Array.isArray(data)) {

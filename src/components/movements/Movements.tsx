@@ -14,8 +14,20 @@ function Movements() {
     const [data, setData] = useState<DataProps[]>([]);
     const [isLoading, setIsLoading] = useState<Boolean>(true);
 
+    // useEffect(() => {
+    //     fetch('/api')
+    //         .then((response) => {
+    //             return response.json()
+    //         })
+    //         .then((jsonData) => {
+    //             setData(jsonData)
+    //             setIsLoading(false)
+    //         })
+    //         .catch((error) => console.error(error));
+    // }, []);
+
     useEffect(() => {
-        fetch('/api')
+        fetch('https://youmarket-a25af-default-rtdb.firebaseio.com/data.json')
             .then((response) => {
                 return response.json()
             })
@@ -25,6 +37,8 @@ function Movements() {
             })
             .catch((error) => console.error(error));
     }, []);
+
+    console.log(data, 'data')
 
     return (
         <div className={classes.movementsContainer}>
@@ -49,20 +63,21 @@ function Movements() {
                             </div>
                         </div>
                     ))
-            ) : (
-                data.map((item: DataProps, index) => (
-                    <div className={classes.movement} key={index}>
-                        <div>
-                            <IconHandler key={new Date().getTime() + index} name={item.icono} size={40} />
-                            <p> {item.texto}</p>
+            ) :
+                (
+                    data.map((item: DataProps, index) => (
+                        <div className={classes.movement} key={index}>
+                            <div>
+                                <IconHandler key={new Date().getTime() + index} name={item.icono} size={40} />
+                                <p> {item.texto}</p>
+                            </div>
+                            <div>
+                                <p> {item.monto}</p>
+                                <p>{item.fecha}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p> {item.monto}</p>
-                            <p>{item.fecha}</p>
-                        </div>
-                    </div>
-                ))
-            )}
+                    ))
+                )}
         </div>
     );
 }
