@@ -10,6 +10,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-top: 181px;
+  overflow: hidden;
 
   @include media-min-width(380px) {
     width: 381px;

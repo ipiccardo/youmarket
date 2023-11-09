@@ -17,7 +17,7 @@ export const store = createContext<storeProps | null>(null);
 
 
 export default function storeContextProvider({ children }: storeContextProvider) {
-    const [pin, setPin] = useState(123456)
+    const [pin, setPin] = useState(987654)
 
     return (
         <store.Provider

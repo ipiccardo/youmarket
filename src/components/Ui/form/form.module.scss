@@ -37,8 +37,13 @@
   justify-content: center;
   margin: 0 auto;
 
+  .textError {
+    padding-bottom: 20px;
+  }
+
   .textError span {
     color: map-get($colors, text-error);
+    padding-bottom: 20px;
   }
 
   @include media-min-width(380px) {
