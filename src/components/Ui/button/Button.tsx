@@ -17,7 +17,7 @@ const Button = ({ href, classNameButton, classNameContent, text, secondaryButton
 
 
     return (
-        <Link href={href} className={classes.button}>
+        <Link href={href} className={classes.anchorButton}>
             <button disabled={disabled ? true : false} onClick={onClick} ref={buttonRef} className={secondaryButton ? `${classes.secondaryButton} ${classNameButton || ""}` : `${classes.button} ${classNameButton || ""}`}>
                 <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
             </button>

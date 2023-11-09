@@ -86,7 +86,7 @@ function Form() {
                 })
                 }
             </div>
-            <Button href={'/pages'} text={'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} disabled={!isValid && inputFinalValue !== keyValid} />
+            <Button href={'/pages'} text={keyValid === inputFinalValue || isValid ? 'CONTINUAR' : 'REENVIAR CÓDIGO'} secondaryButton={true} flag={focusSeted} disabled={!isValid && inputFinalValue !== keyValid} />
             {isValid || keyValid === inputFinalValue ? null : <p className={classes.textError}>{inputFinalValue.length >= 6 ? <span>El código es incorrecto.</span> : ''}</p>}
         </form>
     );
