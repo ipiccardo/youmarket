@@ -9,11 +9,15 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 181px;
+  margin-top: 100px;
   overflow: hidden;
 
   @include media-min-width(380px) {
     width: 381px;
+  }
+
+  @include media-min-width(428px) {
+    margin-top: 181px;
   }
 
   @include media-min-width(40rem) {
