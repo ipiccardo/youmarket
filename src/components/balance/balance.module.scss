@@ -1,3 +1,5 @@
+@import "../../styles/base";
+
 .balanceContainer {
   max-width: 428px;
   max-height: 762px;
@@ -36,6 +38,7 @@
     outline: none;
     background-color: inherit;
     border: 0;
+    color: map-get($colors, black-primary);
   }
   label {
     position: absolute;
@@ -51,7 +54,6 @@
   }
   div {
     max-width: 428px;
-    // height: 173px;
   }
 }
 
