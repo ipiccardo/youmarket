@@ -27,19 +27,6 @@ const Card = () => {
         setIsDropdownOpen(false);
     };
 
-
-    // useEffect(() => {
-    //     fetch('/api')
-    //         .then((response) => {
-    //             return response.json()
-    //         })
-    //         .then((jsonData: DataProps[]) => {
-    //             setData(jsonData)
-    //         })
-    //         .catch((error) => console.error(error));
-    // }, []);
-
-
     useEffect(() => {
         fetch('https://youmarket-a25af-default-rtdb.firebaseio.com/data.json')
             .then((response) => {

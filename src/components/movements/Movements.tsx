@@ -14,17 +14,6 @@ function Movements() {
     const [data, setData] = useState<DataProps[]>([]);
     const [isLoading, setIsLoading] = useState<Boolean>(true);
 
-    // useEffect(() => {
-    //     fetch('/api')
-    //         .then((response) => {
-    //             return response.json()
-    //         })
-    //         .then((jsonData) => {
-    //             setData(jsonData)
-    //             setIsLoading(false)
-    //         })
-    //         .catch((error) => console.error(error));
-    // }, []);
 
     useEffect(() => {
         fetch('https://youmarket-a25af-default-rtdb.firebaseio.com/data.json')
