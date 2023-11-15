@@ -59,7 +59,7 @@ const Login = () => {
         if (error || email === '') {
             setError('Ingrese una dirección de correo electrónico válida.')
             setBlur(true)
-            setEmail('ejemplo@hotmail.com')
+            setEmail('ejemplo@gmail.com')
         } else {
             setError('')
             sendEmail(email)
