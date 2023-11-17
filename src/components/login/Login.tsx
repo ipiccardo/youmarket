@@ -77,7 +77,7 @@ const Login = () => {
                 </form>
             </div>
             <Button onClick={handleShowError} href={`${error === '' && email !== '' ? '/pages/dashboard/verification' : '/'}`} text={'INICIAR SESIÓN'} />
-            <p className={styles.link}>Insertá un email</p>
+            <p className={styles.link}>Ingresá un email</p>
         </div>
     )
 }
