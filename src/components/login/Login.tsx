@@ -72,7 +72,7 @@ const Login = () => {
                 <form>
                     <input type='email' id="myInput" placeholder="" required value={email || ''}
                         onChange={handleEmailChange} onBlur={() => setBlur(true)} onFocus={() => { setError(''), setBlur(false), setEmail(email.includes('ejemplo') ? '' : email) }} />
-                    <label htmlFor="myInput">CUIT o Correo Electrónico</label>
+                    <label htmlFor="myInput">Correo Electrónico</label>
                     {(error && blur && email !== '') ? <div className={styles.error}>{error}</div> : ''}
                 </form>
             </div>
