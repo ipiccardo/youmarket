@@ -65,6 +65,9 @@
   a {
     cursor: auto;
   }
+  svg {
+    margin-left: 5px !important;
+  }
 }
 
 .iconText {
@@ -74,4 +77,8 @@
 
 .rechargeIcon {
   cursor: pointer !important;
+
+  svg {
+    margin-left: 0px !important;
+  }
 }
