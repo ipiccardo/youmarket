@@ -63,10 +63,15 @@
   }
   a {
     margin-left: 5px;
+    cursor: auto;
   }
 }
 
 .iconText {
   color: map-get($colors, action) !important;
   cursor: pointer;
+}
+
+.rechargeIcon {
+  cursor: pointer !important;
 }
