@@ -58,7 +58,15 @@
     font-weight: 700;
     line-height: 14.63px;
     margin: 0 auto;
-    color: map-get($colors, action);
+    color: map-get($colors, icon-disabled);
     text-decoration: underline;
   }
+  a {
+    margin-left: 5px;
+  }
+}
+
+.iconText {
+  color: map-get($colors, action) !important;
+  cursor: pointer;
 }

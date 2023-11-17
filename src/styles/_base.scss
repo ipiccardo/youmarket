@@ -12,6 +12,7 @@ $colors: (
   text-error: red,
   hover-primary: #f0f0f0,
   border-color: #ccc,
+  icon-disabled: grey,
 );
 
 $border-default: 1px solid map-get($colors, black-primary);

@@ -27,7 +27,6 @@ function Movements() {
             .catch((error) => console.error(error));
     }, []);
 
-    console.log(data, 'data')
 
     return (
         <div className={classes.movementsContainer}>
