@@ -25,7 +25,10 @@ const Actions = () => {
                                 <Link className={`${propValue.name === 'recharge' && classes.rechargeIcon}`} href={`${propValue.name === 'recharge' ? '/pages/dashboard/acredit' : 'pages'}`}>
                                     <IconHandler name={propValue.name} size={45} />
                                 </Link>
-                                <p className={`${propValue.text === 'Cargar Saldo' && classes.iconText}`}>{propValue.text}</p>
+                                {propValue.text === 'Cargar Saldo' ? <Link className={classes.iconText} href={'/pages/dashboard/acredit'}>{propValue.text}</Link> :
+
+                                    <p>{propValue.text}</p>
+                                }
                             </div>
                         )
                     }

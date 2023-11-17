@@ -52,7 +52,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 15px;
-  p {
+  p,
+  a {
     font-size: 12px;
     text-align: center;
     font-weight: 700;
@@ -62,14 +63,13 @@
     text-decoration: underline;
   }
   a {
-    margin-left: 5px;
     cursor: auto;
   }
 }
 
 .iconText {
   color: map-get($colors, action) !important;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .rechargeIcon {
